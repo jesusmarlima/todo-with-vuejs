@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-  import { store } from '../store';
   import Divider  from './Divider.vue';
 
    export default {
@@ -20,7 +19,6 @@
          default: false
        }
      },
-     store,
      methods: {
        resetStore (){
          this.$store.dispatch('resetStore');

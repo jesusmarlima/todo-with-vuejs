@@ -13,7 +13,6 @@
 </template>
 
 <script>
-  import { store } from '../store';
   import Divider from "./Divider";
   import ResetStore  from "./ResetStore";
   export default {
@@ -21,8 +20,7 @@
         Divider,
         ResetStore
       },
-      name: "",
-      store,
+      name: "DoneItems",
       props:['visible'],
       data () {
         return {}

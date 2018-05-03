@@ -46,7 +46,7 @@ export function __createMocks(custom = {getters: {}, state: {}, mutations: {}, a
     store: new Vuex.Store({
       getters: mockGetters,
       state: mockState,
-      MUTATIONS: mockMutations,
+      mutations: mockMutations,
       actions: mockActions
     }),
   };

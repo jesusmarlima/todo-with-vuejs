@@ -1,20 +1,18 @@
 <template>
   <div>
     <div class="input-group mb-3">
-      <input  v-model="new_item.text" type="text" class="form-control" placeholder="task here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <input v-model="new_item.text" type="text" class="form-control" placeholder="task here" aria-label="Recipient's username" aria-describedby="basic-addon2">
       <div class="input-group-append">
-        <button @click="addItem(new_item)" class="btn btn-outline-secondary" type="button">Add task</button>
+        <button v-on:click="addItem(new_item)" class="btn btn-outline-secondary" type="button">Add task</button>
       </div>
     </div>
-  <div class="alert alert-danger" role="alert" v-if="errorMessage !== ''">
+    <div class="alert alert-danger" role="alert" v-if="errorMessage !== ''">
       {{ errorMessage }}
     </div>
   </div>
 </template>
 <script>
-  import { store } from '../store';
   export default {
-      store,
       name: "",
       data () {
         return {
@@ -30,6 +28,7 @@
           } else {
             this.errorMessage = "";
           }
+          //this.$store.commit('addItem', item);
           this.$store.dispatch('addItem', item );
           this.new_item = {
             text: "",

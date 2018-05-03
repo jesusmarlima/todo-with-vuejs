@@ -1,8 +1,8 @@
 <template>
-  <div class="container" id="app">
+  <div class="container" id="todo">
     <h1>Vue Todo with Vuex </h1>
     <AddNewTask />
-    <TodoList  :visible="uncompleted"/>
+    <TodoList :visible="uncompleted"/>
     <Divider :visible="completed"/>
     <DoneItems :visible="completed" />
     <ResetSore :visible="completed" />
@@ -10,13 +10,11 @@
 </template>
 
 <script>
-import { store } from './store';
 import DoneItems from'./components/DoneItems.vue';
 import AddNewTask from './components/AddNewTask.vue';
 import TodoList from './components/TodoList.vue';
 import ResetSore from './components/ResetStore.vue'
 import Divider from './components/Divider.vue';
-
 
 export default {
   components: {
@@ -26,7 +24,6 @@ export default {
     ResetSore,
     Divider
   },
-  store,
   computed: {
     uncompleted() {
       return this.$store.getters.uncompleted.length > 0
@@ -38,7 +35,7 @@ export default {
 }
 </script>
 <style>
-    #app {
+    #todo {
         margin-top: 60px;
         width: 400px;
     }

@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+  // strict: true,  
   state: {
     todo_list: []
   },
@@ -23,10 +24,7 @@ export const store = new Vuex.Store({
       state.todo_list.push(new_item);
     },
     complete: (state, item) => {
-      let {todo_list} = state;
-      let element = todo_list.find((i) => i.text === item.text);
-      todo_list[todo_list.indexOf(element)].complte = true;
-      state.todo_list = todo_list;
+      item.complete = true;
     },
     resetStore: (state) => {
       state.todo_list = [];
