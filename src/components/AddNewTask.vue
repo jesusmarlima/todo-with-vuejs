@@ -6,7 +6,7 @@
         <button v-on:click="addItem(new_item)" class="btn btn-outline-secondary" type="button">Add task</button>
       </div>
     </div>
-    <div class="alert alert-danger" role="alert" v-if="errorMessage !== ''">
+    <div class="alert alert-danger" role="alert" v-if="errorMessage !== '' && new_item.text === ''">
       {{ errorMessage }}
     </div>
   </div>

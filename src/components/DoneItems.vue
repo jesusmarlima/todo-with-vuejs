@@ -16,10 +16,6 @@
   import Divider from "./Divider";
   import ResetStore  from "./ResetStore";
   export default {
-      components: {
-        Divider,
-        ResetStore
-      },
       name: "DoneItems",
       props:['visible'],
       data () {
