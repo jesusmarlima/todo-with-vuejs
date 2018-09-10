@@ -8,7 +8,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "test": "jest",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "jest": {
@@ -33,7 +33,7 @@
     "axios": "^0.18.0",
     "babel-jest": "^22.4.3",
     "https-proxy-agent": "^2.2.1",
-    "jest": "^22.4.3",
+    "jest": "^23.4.1",
     "jest-serializer-vue": "^1.0.0",
     "sinon": "^4.5.0",
     "url-parse": "^1.4.3",

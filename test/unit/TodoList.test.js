@@ -13,6 +13,6 @@ describe('TodoList', () => {
   it('creates a list of empty items', () => {
     let storeMocks = createStoreMocks();
     let wrapper = shallow(TodoList, {store: storeMocks.store, localVue});
-    expect(wrapper.find('.list-group').exists()).toBe(true);
+    expect(wrapper.find('.list-group').exists()).toBe(false);
   });
 });

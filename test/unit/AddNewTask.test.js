@@ -1,5 +1,6 @@
 import {shallow, mount, createLocalVue} from '@vue/test-utils';
 import AddNewItem from '../../src/components/AddNewTask';
+import {__createMocks as createStoreMocks} from "./mockStore";
 import sinon from 'sinon';
 
 const myStub = sinon.stub();
