@@ -24,7 +24,7 @@ context("Todo",()=>{
         });
   });
 
-  it('black todo and get error message', () => {
+  it('blank todo and get error message', () => {
     cy
       .get('.btn').click()
       .get('.alert').should('be.visible')

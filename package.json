@@ -30,6 +30,7 @@
     "mapCoverage": true
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-jest": "^22.4.3",
     "https-proxy-agent": "^2.2.1",
     "jest": "^22.4.3",
