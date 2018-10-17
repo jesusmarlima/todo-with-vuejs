@@ -4,7 +4,6 @@
     <ul class="list-group">
       <li class="list-group-item"  v-for="item in completed_items">
         <span>
-          <i class="fas fa-check fa-xs"></i>
           {{ item.text }}
         </span>
       </li>

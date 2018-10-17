@@ -5,7 +5,7 @@
       <li class="list-group-item" v-for="item in list_items">
           <!-- <input type="checkbox" v-text="item.complete" v-on:click="complete(item)"> -->
           <input type="checkbox" v-model="item.complete">
-          <span> {{ item.text }} </span>
+          <span class="todoText"> {{ item.text }} </span>
       </li>
     </ul>
   </div>
